@@ -1,0 +1,49 @@
+section table {
+  font-size: 125%;
+}
+section table thead #lebar {
+  width: 180px;
+}
+section table thead #nolebar {
+  width: 100px;
+  text-align: center;
+}
+section table tbody tr td img {
+  pointer-events: none;
+  cursor: no-drop;
+}
+
+@media (max-width: 768px) {
+  section table {
+    font-size: 110%;
+  }
+  section table thead #nolebar {
+    width: 60px;
+    text-align: center;
+  }
+  section table thead #lebar {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  section table {
+    font-size: 100%;
+  }
+  section table thead #lebar {
+    width: 100px; 
+  }
+
+  section table thead #nolebar {
+    width: 40px;
+  }
+}
+
+@media (max-width: 386px) {
+  section table thead #nolebar {
+    width: 35px;
+  }
+  section table thead #lebar {
+    width: 85px; 
+  }
+}

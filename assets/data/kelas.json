@@ -1,0 +1,205 @@
+{ 
+  "classname": [
+    {
+      "navjudul": "Sistem Informasi 2022-3",
+      "uppercasejudul": "SISTEM INFORMASI<br>2022-3"
+    }
+  ],
+  "footer": [
+    {
+      "footerinner": "Copyright &copy 2023 Sistem Informasi 2022-3"
+    }
+  ],
+  "mahasiswa": [
+    {
+      "no": 1,
+      "foto": "foto/rara.jpg",
+      "nim": 5720122024,
+      "nama": "ZAHRANI RAHMADANI",
+      "instagram": {
+        "url": "https://www.instagram.com/zahranirhmdniii_/",
+        "username": "zahranirhmdniii_"
+      }
+    },
+    {
+      "no": 2,
+      "foto": "foto/hikmah.jpg",
+      "nim": 5720122025,
+      "nama": "HIKMAH",
+      "instagram": {
+        "url": "https://www.instagram.com/hikmah_hasanudin/",
+        "username": "hikmah_hasanudin"
+      }
+    },
+    {
+      "no": 3,
+      "foto": "foto/vindi.jpg",
+      "nim": 5720122027,
+      "nama": "VINDI YESELIA LAMAIN",
+      "instagram": {
+        "url": "https://www.instagram.com/v_ndyy/",
+        "username": "v_ndyy"
+      }
+    },
+    {
+      "no": 4,
+      "foto": "foto/ledwin.jpg",
+      "nim": 5720122028,
+      "nama": "LEDWIN EZKIEL WOTULO <small class='text-secondary'><i>as Creator web</i></small>",
+      "instagram": {
+        "url": "https://www.instagram.com/ledwin_ezkiel_wotulo/",
+        "username": "ledwin_ezkiel_wotulo"
+      }
+    },
+    {
+      "no": 5,
+      "foto": "foto/aldy.jpg",
+      "nim": 5720122030,
+      "nama": "REINALDI ALFRITS DJILOI",
+      "instagram": {
+        "url": "https://www.instagram.com/reinaldy_djiloi/",
+        "username": "reinaldy_djiloi"
+      }
+    },
+    {
+      "no": 6,
+      "foto": "foto/zara.jpg",
+      "nim": 5720122032,
+      "nama": "IIN ZAHRAINI",
+      "instagram": {
+        "url": "https://www.instagram.com/zaraainn._/",
+        "username": "zaraainn._"
+      }
+    },
+    {
+      "no": 7,
+      "foto": "foto/willy.jpg",
+      "nim": 5720122033,
+      "nama": "WILTENS W. KAWANDE",
+      "instagram": {
+        "url": "https://www.instagram.com/willy_kawande/",
+        "username": "willy_kawande"
+      }
+    },
+    {
+      "no": 8,
+      "foto": "foto/sulham.jpg",
+      "nim": 5720122034,
+      "nama": "SULHAM HUSAIN",
+      "instagram": {
+        "url": "https://www.instagram.com/",
+        "username": "-"
+      }
+    },
+    {
+      "no": 9,
+      "foto": "foto/yuni.jpg",
+      "nim": 5720122035,
+      "nama": "SRI WAHYUNI IRWAN",
+      "instagram": {
+        "url": "https://www.instagram.com/srwhyuniirwn_/",
+        "username": "srwhyuniirwn_"
+      }
+    },
+    {
+      "no": 10,
+      "foto": "foto/gafri.jpg",
+      "nim": 5720122036,
+      "nama": "MOH. GAFRI",
+      "instagram": {
+        "url": "https://www.instagram.com/gafrii.lol/",
+        "username": "gafrii.lol"
+      }
+    },
+    {
+      "no": 11,
+      "foto": "foto/angela.jpg",
+      "nim": 5720122037,
+      "nama": "ANGELA LISNIA SETIAWAN",
+      "instagram": {
+        "url": "https://www.instagram.com/angelalisniaaaaaaa/",
+        "username": "angelalisniaaaaaaa"
+      }
+    },
+    {
+      "no": 12,
+      "foto": "foto/maria.jpg",
+      "nim": 5720122038,
+      "nama": "MARIA MAGDALENA TIBIAN",
+      "instagram": {
+        "url": "https://www.instagram.com/itztibiantowesu/",
+        "username": "itztibiantowesu"
+      }
+    },
+    {
+      "no": 13,
+      "foto": "foto/alex.jpg",
+      "nim": 5720122039,
+      "nama": "ALEXANDRO GILEAD MARADA",
+      "instagram": {
+        "url": "https://www.instagram.com/maradaa_/",
+        "username": "maradaa_"
+      }
+    },
+    {
+      "no": 14,
+      "foto": "foto/ilham.jpg",
+      "nim": 5720122041,
+      "nama": "MOH. ILHAM DARISE",
+      "instagram": {
+        "url": "https://www.instagram.com/",
+        "username": ""
+      }
+    },
+    {
+      "no": 15,
+      "foto": "foto/adi.jpg",
+      "nim": 5720122042,
+      "nama": "ADI WIJAYA",
+      "instagram": {
+        "url": "https://www.instagram.com/adiwiijaya8/",
+        "username": "adiwiijaya8"
+      }
+    },
+    {
+      "no": 16,
+      "foto": "foto/yeko.jpg",
+      "nim": 5720122043,
+      "nama": "YEKO ELROY NALDI TOWAWO",
+      "instagram": {
+        "url": "https://www.instagram.com/ellnaldi/",
+        "username": "ellnaldi"
+      }
+    },
+    {
+      "no": 17,
+      "foto": "foto/yizka.jpg",
+      "nim": 5720122044,
+      "nama": "YIZKATRY FOUSA P TIBIAN",
+      "instagram": {
+        "url": "https://www.instagram.com/yizkatryfsa_agl/",
+        "username": "yizkatryfsa_agl"
+      }
+    },
+    {
+      "no": 18,
+      "foto": "foto/geral.jpg",
+      "nim": 5720122046,
+      "nama": "KRISTIAN GERAL",
+      "instagram": {
+        "url": "https://www.instagram.com/ger4ldcristian/",
+        "username": "ger4ldcristian"
+      }
+    },
+    {
+      "no": 19,
+      "foto": "foto/agil.jpg",
+      "nim": 5720122048,
+      "nama": "MOH AGIL A. HALUMA",
+      "instagram": {
+        "url": "https://www.instagram.com/mhmd_agyl/",
+        "username": "mhmd_agyl"
+      }
+    }
+  ]
+}
