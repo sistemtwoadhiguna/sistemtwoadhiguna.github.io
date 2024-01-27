@@ -153,10 +153,11 @@
     fetch('https://siakt22-agp.000webhostapp.com/api/list_mahasiswa/')
       .then(mahasiswa => mahasiswa.json())
       .then(response =>{
+        let i = 1
           for (const mahasiswa of response.mahasiswa) {
           tampil += `
           <tr class="reveal-bottom">
-            <th scope="row" class="text-center">+</th>
+            <th scope="row" class="text-center">${i++}</th>
             <td><img src="https://siakt22-agp.000webhostapp.com/img/${mahasiswa.foto}" alt="${mahasiswa.nama}" class="img-fluid rounded"></td>
             <td>${mahasiswa.nim} <br>${mahasiswa.nama} <br> <a href="https://www.instagram.com/${mahasiswa.username_ig}" target="_blank"><i class="bi bi-instagram"></i> ${mahasiswa.username_ig}</a><br>Website: <a href="${mahasiswa.website}" target="_blank">Klik di sini</a></td>
           </tr>
