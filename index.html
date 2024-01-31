@@ -115,6 +115,29 @@
       </div>
     </div>
   </section>
+
+  <section id="tugas">
+    <div class="container">
+      <h2 class="text-center mb-5">Daftar Tugas</h2>
+      <div style="overflow-x: scroll;">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Mata Kuliah</th>
+              <th scope="col">Tugas</th>
+              <th scope="col">Deadline</th>
+            </tr>
+          </thead>
+          <tbody id="tampil-tugas">
+            <tr>
+              <th scope="row">Tidak ada tugas saat ini</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
   <p class="text-center p-4" style="background: url(assets/img/background/breadcrumb-bg.png)">
     <img src="assets/img/unDraw/undraw_1.svg" class="mb-4 reveal-left" style="pointer-events: none; cursor: not-allowed;" width="300px">
   </p>
@@ -185,6 +208,27 @@
 
   <!-- js source -->
   <script src="assets/App/kelas.js"></script>
+
+  <script>
+    let tugase = '';
+    fetch('https://siakt22-agp.000webhostapp.com/api/list_tugas/')
+    .then(tugas => tugas.json())
+    .then(response => {
+      let i = 1
+        for (const tugas of response.tugas) {
+          tugase += `
+          <tr>
+            <th scope="row">${i++}</th>
+            <td>${tugas.mata_kuliah}</td>
+            <td>${tugas.item_tugas}</td>
+            <td style="white-space: nowrap;">Tanggal: ${tugas.deadline}<br>Jam: ${tugas.jam_deadline}</td>
+          </tr>
+          `;
+        };
+        document.getElementById('tampil-tugas').innerHTML = tugase;
+    });
+  </script>
+  
   <script>
     // judul kelas uppercase
     let judulUppercase = '';
