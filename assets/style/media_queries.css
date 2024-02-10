@@ -1,6 +1,18 @@
 @import url(style.css);
 
 /* media query */
+@media(min-width: 1200px) {
+      footer iframe {
+         width: 450px !important;
+      }
+}
+
+@media(max-width: 1198px) {
+      footer iframe {
+         width: 100% !important;
+      }
+}
+
 @media (max-width: 991px) {
    nav .navbar-brand {
       font-size: 90%;
