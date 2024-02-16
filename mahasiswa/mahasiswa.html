@@ -59,25 +59,14 @@
           </ol>
         </nav>
       </div>
-      <div class="row mx-auto mb-4">
-        <h3 class="text-center my-4 reveal-left">Mahasiswa Kelas SI.2</h3>
 
-        <!-- isi tabel -->
-        <small class="float-end text-secondary reveal-bottom">Note: Mahasiswa yang ditampilkan di bawah ini adalah mahasiswa aktif</small>
-        <table class="table table-hover shadow-sm mahasiswa mb-5">
-          <thead>
-            <tr>
-              <th scope="col" id="nolebar">#</th>
-              <th scope="col" id="lebar">Foto</th>
-              <th scope="col">NAMA</th>
-            </tr>
-          </thead>
-          <tbody id="app">
-          </tbody>
-        </table>
-        <!-- isi tabel end -->
+      <h3 class="text-center my-4 reveal-left">Mahasiswa Kelas SI.2</h3>
+      <small class="text-secondary reveal-bottom">Note: Mahasiswa yang ditampilkan di bawah ini adalah mahasiswa aktif</small>
+
+      <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 mx-auto mb-4" id="app">
 
       </div>
+
     </div>
   </section>
   <p class="text-center reveal-left">
@@ -156,17 +145,29 @@
       .then(response =>{
         let i = 1
           for (const mahasiswa of response.mahasiswa) {
-          tampil += `
-          <tr class="reveal-bottom">
-            <th scope="row" class="text-center">${i++}</th>
-            <td><img src="https://siakt22-agp.000webhostapp.com/mahasiswa/img/${mahasiswa.foto}" alt="${mahasiswa.nama}" class="img-fluid rounded"></td>
-            <td>${mahasiswa.nim} <br>${mahasiswa.nama} <br> <a href="https://www.instagram.com/${mahasiswa.username_ig}" target="_blank"><i class="bi bi-instagram"></i> ${mahasiswa.username_ig}</a><br>Website: <a href="${mahasiswa.website}" target="_blank">Klik di sini</a></td>
-          </tr>
-            `
+            tampil += `
+
+            <div class="col g-1 g-md-3 g-lg-4">
+              <div class="card shadow border-0 reveal-bottom kartu-content" style="height: 500px;">
+                <img src="https://siakt22-agp.000webhostapp.com/mahasiswa/img/${mahasiswa.foto}" class="card-img-top" alt="...">
+                <div class="card-body overflow-y-auto">
+                  <h5>${mahasiswa.nama}</h5>
+                  <p class="card-text">${mahasiswa.nim}</p>
+                  <p class="card-text"><a href="https://www.instagram.com/${mahasiswa.username_ig}" target="_blank"><i class="bi bi-instagram"></i>${mahasiswa.username_ig}</a></p>
+                  <p class="card-text m-0">Website: 
+                    <div class="overflow-x-hidden">
+                      <a href="${mahasiswa.website}" target="_blank">${mahasiswa.website}</a>
+                    </div></p>
+                </div>
+              </div>
+            </div>
+          `
+          
           }
           document.getElementById('app').innerHTML = tampil;
       });
   </script>
+  
   <script src="../assets/App/kelas.js"></script>
   <script src="../assets/script/script.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
