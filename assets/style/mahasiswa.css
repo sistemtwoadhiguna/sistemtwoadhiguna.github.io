@@ -37,6 +37,10 @@ section table tbody tr td img {
   section table thead #nolebar {
     width: 40px;
   }
+
+  .kartu-content {
+    height: 370px !important;
+  }
 }
 
 @media (max-width: 386px) {
@@ -45,5 +49,9 @@ section table tbody tr td img {
   }
   section table thead #lebar {
     width: 85px; 
+  }
+
+  .kartu-content {
+    height: 330px !important;
   }
 }
