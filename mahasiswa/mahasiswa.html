@@ -147,10 +147,10 @@
           for (const mahasiswa of response.mahasiswa) {
             tampil += `
 
-            <div class="col g-2 g-md-3 g-lg-4">
+            <div class="col g-2 g-md-3 g-lg-4 mx-auto">
               <div class="card shadow border-0 reveal-bottom kartu-content" style="height: 500px;">
-                <img src="https://siakt22-agp.000webhostapp.com/mahasiswa/img/${mahasiswa.foto}" class="card-img-top" alt="..." style="height: 56% !important; object-fit: cover;">
-                <div class="card-body overflow-y-auto">
+                <img src="https://siakt22-agp.000webhostapp.com/mahasiswa/img/${mahasiswa.foto}" class="card-img-top" alt="..." style="height: 54% !important; object-fit: cover;">
+                <div class="card-body overflow-y-auto p-1 p-md-3">
                   <h5>${mahasiswa.nama}</h5>
                   <p class="card-text m-0">${mahasiswa.nim}</p>
                   <p class="card-text m-0"><a href="https://www.instagram.com/${mahasiswa.username_ig}" target="_blank"><i class="bi bi-instagram"></i>${mahasiswa.username_ig}</a></p>
