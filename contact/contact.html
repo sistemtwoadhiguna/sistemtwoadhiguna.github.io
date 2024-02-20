@@ -7,7 +7,7 @@
   <meta name="description" content="Selamat datang di website kami!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../assets/img/logo/logo.png" type="image/x-icon">
-  <title>Kontak - Sistem Informasi 2022_3</title>
+  <title>Kontak - Sistem Informasi 2022_4</title>
   <!-- link bootstrap 5.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -74,7 +74,7 @@
               <strong>Terima Kasih!</strong> Pesan anda berhasil dikirim <small><i>Anda akan menerima balasan dalam 24 jam.</i></small>
               <button type="button" class="btn-close alert-close" aria-label="Close"></button>
             </div>
-            <form class="row g-3" name="form-kontak-kami" autocomplete="off" autocapitalize="on">
+            <form class="row g-3" name="form-kontak-kami" autocomplete="off" autocapitalize="on" id="form-kontak-kami" method="post">
               <input type="hidden" name="idPengirim" id="idPengirim">
               <div class="col-md-6 reveal-bottom">
                 <label for="nama" class="form-label">Nama</label>
@@ -183,35 +183,52 @@
   <script src="../assets/script/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw8BGj9BO0mYzcaP3ktCbydZeoKEs8VTVfnXjCgoG46cO8LGTouVemRVMf77hOQEqj7/exec'
-    const form = document.forms['form-kontak-kami'];
-    const btnKirim = document.querySelector('.btn-kirim');
-    const btnLoading = document.querySelector('.btn-loading');
-    const popup = document.querySelector('.pesan-popup');
-    // uuid
-    const idPengirim = document.getElementById('idPengirim');
-    let uuid = self.crypto.randomUUID();
-    idPengirim.value = uuid;
+    const form = document.querySelector('#form-kontak-kami');
 
-    document.querySelector('.alert-close').addEventListener('click', function(){popup.classList.toggle('d-none')});
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      // ketika tombol submit diklik
-      // hilangkan tombol submit, tampilkan tombol loading
+      e.preventDefault();
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const popup = document.querySelector('.pesan-popup');
+
+      document.querySelector('.alert-close').addEventListener('click', function(){popup.classList.toggle('d-none')});
+
       btnLoading.classList.toggle('d-none');
       btnKirim.classList.toggle('d-none');
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-          // hilangkan tombol loading, tampilkan tombol kirim
+
+      const nama = document.querySelector('#nama').value;
+      const email = document.querySelector('#email').value;
+      const telpon = document.querySelector('#telpon').value;
+      const subjek = document.querySelector('#subjek').value;
+      const pesan = document.querySelector('#area-pesan').value;
+
+      const token = '6418402373:AAH6Zr9N4tf86N8V7C1-PcBbzJ5QJGbH21Q';
+      const groupId = '-4114458890';
+
+      const url = `https://api.telegram.org/bot${token}/sendMessage`;
+      const data = `chat_id=${groupId}&text=<b>Pesan Masuk dari:</b>%0A%0ANama%3A%20${nama}%0AEmail%3A%20${email}%0ANo.%20HP%3A%20${telpon}%0ASubjek%3A%20${subjek}%0A%0APesan%3A%0A${pesan}&parse_mode=HTML`;
+
+      // window.open(url+'?'+data, '_blank');
+
+      fetch(url, {
+      method: 'POST', // atau 'PUT'
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: data,
+        })
+        .then((response) => response.json())
+        .then((data) => {
           btnLoading.classList.toggle('d-none');
           btnKirim.classList.toggle('d-none');
-          // tampilkan pesan popup berhasil
           popup.classList.toggle('d-none');
-          // reset form
-          form.reset();
-          console.log('Success!', response)
+            console.log('Success:', data);
+            form.reset();
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+    });
   </script>
 </body>
